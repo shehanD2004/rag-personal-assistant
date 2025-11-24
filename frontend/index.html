@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Personal Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>RAG Personal Assistant</h1>
+            <p>Upload PDFs and ask questions about your documents</p>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="card upload-section">
+            <h2>Upload Document</h2>
+            
+            <div class="file-upload" id="uploadArea">
+                <input type="file" id="pdfInput" class="file-input" accept=".pdf">
+                <button class="upload-btn" onclick="document.getElementById('pdfInput').click()">
+                    📁 Choose PDF File
+                </button>
+                <div class="file-info" id="fileInfo">No file selected</div>
+                <small style="color: #666; margin-top: 8px; display: block;">
+                    or drag and drop your PDF here
+                </small>
+            </div>
+            
+            <button id="uploadBtn" class="upload-btn">📁 Upload PDF</button>
+            <div id="uploadStatus"></div>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="card chat-section">
+            <h2>Chat with Documents</h2>
+            
+            <div class="chat-container">
+                <div class="chat-history" id="chatHistory">
+                    <div class="chat-message assistant-message">
+                        <div class="message-bubble">
+                            <div class="message-content">
+                                👋 Hello! I'm your RAG assistant. Upload a PDF document and ask me questions about its content.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="input-group">
+                        <textarea 
+                            id="questionInput" 
+                            class="question-input" 
+                            placeholder="Ask a question about your document..."
+                            rows="1"
+                        ></textarea>
+                    </div>
+                    <button id="sendBtn" class="send-btn" disabled>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
