@@ -134,6 +134,12 @@ Retrieves the best matching chunk.
 
 ---
 
+Screenshots
+
+<img width="1920" height="941" alt="RAG-SS" src="https://github.com/user-attachments/assets/6a23b4ed-b715-4bbb-9cec-8478e6b08e77" />
+
+---
+
 🤝 Contributing
 
 Pull requests are welcome!
